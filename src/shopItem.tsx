@@ -12,13 +12,15 @@ export default function ShopItem({data, onAdd, onDetails}: IShopItemProps){
         <div className={style['wrapper']}>
             <h2 className={style['title']}>{data.title}</h2>
             <div className={style['infoPanel']}>
-                <img className={style['image']} src={data.image}/> 
-                <p>price: {data.price}$</p>
+                <div className={style['imageWrapper']}>
+                    <img className={style['image']} src={data.image}/> 
+                </div>                
+                <p className={style['price']}>price: {data.price}$</p>
             </div>
            
             <div className={style['buttonPanel']}>
-                <button onClick={()=>{onAdd()}}>to cart</button>
-                <button onClick={()=>{onDetails()}}>details...</button>
+                <button className={style['btn']} onClick={()=>{onAdd()}}>to cart</button>
+                <button className={style['btn']} onClick={()=>{onDetails()}}>details...</button>
             </div>
            
         </div>

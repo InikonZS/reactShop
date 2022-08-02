@@ -1,24 +1,66 @@
 .wrapper{
-    --margin: 10px;
+    --margin: 15px;
     margin: var(--margin);
+    padding: 15px;
     width: calc(100% / 3 - 2 * var(--margin));
     display: flex;
+    flex: 1 1 20rem;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;   
+}
+
+.wrapper:hover {
+    box-shadow: 0 1rem 2rem rgb(0 0 0 / 10%);
 }
 
 .title{
+    font-size: 1.3rem;
+    margin: 20px;
+    text-align: center;
 
-}
-
-.image{
-    width: 100%;
-    margin: 0 auto;
 }
 
 .infoPanel{
+    width: 100%;
     height: 100%;
 }
 
-.buttonPanel{
-
+.imageWrapper {
+    width: 100%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
 }
+
+.image {    
+    height: 25rem;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.buttonPanel{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 90%;
+  margin-bottom: 20px;
+}
+
+.btn {
+    background: green;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-right: 15px;    
+    border: 1px solid transparent;
+    border-radius: 3px;
+}
+
