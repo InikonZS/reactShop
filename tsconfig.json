@@ -3,6 +3,7 @@
     "allowSyntheticDefaultImports": true,
     "noImplicitAny": true,
     "strict": true,
+    "resolveJsonModule":false,
     "module": "es6",
     "target": "es5",
     "allowJs": true,
