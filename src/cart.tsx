@@ -25,11 +25,17 @@ function countItems(items: Array<IShopItemData>): Array<IShopItemData & {count:n
 export default function Cart({items, onRemoveItem}:ICartProps){
     return (
         <div>
-            {items.map(itemData=>{
-                return <CartItem key={itemData.id} data={itemData} onRemove={()=>{
-                    onRemoveItem(itemData);
-                }}/>
-            })}
+            <div>
+                {items.map(itemData=>{
+                    return <CartItem key={itemData.id} data={itemData} onRemove={()=>{
+                        onRemoveItem(itemData);
+                    }}/>
+                })}
+            </div>
+            <div>
+                total: {((items.reduce((ac, it)=> ac + it.price*100 * it.count, 0))/100).toFixed(2)}
+            </div>
         </div>
+        
     )
 }
