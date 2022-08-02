@@ -1,0 +1,24 @@
+.wrapper{
+    --margin: 10px;
+    margin: var(--margin);
+    width: calc(100% / 3 - 2 * var(--margin));
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+
+}
+
+.image{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.infoPanel{
+    height: 100%;
+}
+
+.buttonPanel{
+
+}
