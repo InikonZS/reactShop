@@ -1,5 +1,9 @@
 .wrapper{
-    background-color: #f99;
+    background-color: #fff;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px;
+    min-height: calc(100vh - 2 * 20px);
 }
 
 .list{
@@ -7,5 +11,17 @@
 }
 
 .total{
-    
+
+}
+
+.blackout{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top:0px;
+    left:0px;
+    background-color: #0009;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

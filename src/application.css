@@ -1,0 +1,10 @@
+.header{
+    display: flex;
+    background-color: #000;
+    color: #fff;
+    justify-content: space-between;
+}
+
+.cartIcon{
+
+}
