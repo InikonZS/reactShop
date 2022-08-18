@@ -4,6 +4,7 @@ import dataUrl from './data/shopItems.json';
 import { useEffect, useState } from 'react';
 import IShopItemData from './IShopItemData';
 import style from './application.css';
+import { useDispatch, useSelector } from 'react-redux';
 
 
 
@@ -11,6 +12,9 @@ export default function Application(){
     const [shopItems, setShopItems] = useState<Array<IShopItemData>>([]);
     const [cartItems, setCartItems] = useState<Array<IShopItemData & {count:number}>>([]);
     const [isShownCart, setShownCart] = useState(false);
+    const dispatch = useDispatch();
+    const data = useSelector((state)=> state);
+
     useEffect(()=>{
         fetch(dataUrl).then(res=> res.json()).then(data=>{
             //todo: check data fields
@@ -22,6 +26,10 @@ export default function Application(){
     }, [])
     return (
         <>
+            <div>data: {JSON.stringify(data)}</div>
+            <button onClick={()=>{
+                dispatch({type:'q1', text:''});
+            }}> useStore </button>
             <div className={style['header']}>
                 <div>
                     Shop
